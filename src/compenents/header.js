@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 import "../assets/styles/generalStyle.css"
 
-const Header=(props)=> {
+const Header = (props)=> {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -15,16 +15,22 @@ const Header=(props)=> {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             HOSPİTAL
           </Typography>
-          <div style={{
-            display:"flex",
-            gap:"20px",
-          }}>
-            <Link className="menuLink" to="/">Anasayfa</Link>
-            <Link className="menuLink" to="/Hastalar">Hastalar</Link>
+          <div 
+            style={{
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            <Link className="menuLink" to="/">
+              Anasayfa
+            </Link>
+            <Link className="menuLink" to="/Hastalar">
+              Hastalar
+            </Link>
           </div>
         </Toolbar>
       </AppBar>
     </Box>
   );
-}
-export default Header
+};
+export default Header;

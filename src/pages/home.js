@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../compenents/header"
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,9 +9,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from "axios";
 
-const Home=()=>{
-      const {randevular,setRandevular} = useState(null)
-      const {hastalar,setHastalar} = useState(null)
+const Home = () => {
+      const {randevular, setRandevular} = useState(null)
+      const {hastalar, setHastalar} = useState(null)
 
       useEffect(() => {
           axios
@@ -23,21 +23,21 @@ const Home=()=>{
                 .then((resHastalar) => {
                   setHastalar(setHastalar.data);
                 })
-                .catch((err)=>console.log("Hastalar hata",err));
+                .catch((err)=>console.log("Hastalar hata", err));
             })
-            .catch((err)=>console.log("randevular hata",err));
+            .catch((err)=>console.log("randevular hata", err));
       }, []);
 
 if (randevular === null || hastalar === null) {
   return <h1>Loading...</h1>;
  }
 
-    return(
+    return (
         <div>
             <Header />
-            <TableContainer style={{marginTop: "50px"}} component={Paper}>
+            <TableContainer style={{marginTop: "50px" }} component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead sx={{backgroundColor: "#aaa"}}>
+                <TableHead sx={{ backgroundColor: "#aaa" }}>
                   <TableRow>
                     <TableCell>Tarih</TableCell>
                     <TableCell>Adı</TableCell>
@@ -49,7 +49,7 @@ if (randevular === null || hastalar === null) {
                 <TableBody>
                   {randevular.map((randevu) => {
                     const aradigimHasta = hastalar.find(
-                      (hasta) => hasta.id === randevu.Hastaid
+                      (hasta) => hasta.id === randevu.HastaId
                     );
                     return(
                       <TableRow
@@ -73,6 +73,6 @@ if (randevular === null || hastalar === null) {
             </TableContainer>
           </div>
         );
-}
+      };
 
-export default Home
+export default Home;

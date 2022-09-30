@@ -12,7 +12,7 @@
             "name": "deneme",
             "surname": "deneme",
             "phone": "555 555 55 55",
-            "islemId": ["1","2"]
+            "islemIds": ["1","2"]
         }
     ],
     "islemler":[
@@ -20,13 +20,13 @@
             "id": "1",
             "sikayet": "grip",
             "uygulananTedavi": "2 gün istirahat tavsiye edildi",
-            "Yazılanİlaçlar": ["parol", "keratin","agumentine"]
+            "YazılanIlaçlar": ["parol", "keratin","agumentine"]
         },
         {
             "id": "2",
             "sikayet": "bel ağrısı",
             "uygulananTedavi": "ayakta",
-            "Yazılanİlaçlar": ["parol", "voltaren"]
+            "YazılanIlaçlar": ["parol", "voltaren"]
         }
     ]
 }
