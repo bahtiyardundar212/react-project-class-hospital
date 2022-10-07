@@ -10,8 +10,8 @@ import Paper from '@mui/material/Paper';
 import axios from "axios";
 
 const Home = () => {
-      const {randevular, setRandevular} = useState(null)
-      const {hastalar, setHastalar} = useState(null)
+      const [randevular, setRandevular] = useState(null)
+      const [hastalar, setHastalar] = useState(null)
 
       useEffect(() => {
           axios
@@ -21,7 +21,7 @@ const Home = () => {
               axios
                 .get("http://localhost:3004/Hastalar")
                 .then((resHastalar) => {
-                  setHastalar(setHastalar.data);
+                  setHastalar(resHastalar.data);
                 })
                 .catch((err)=>console.log("Hastalar hata", err));
             })
@@ -49,7 +49,7 @@ if (randevular === null || hastalar === null) {
                 <TableBody>
                   {randevular.map((randevu) => {
                     const aradigimHasta = hastalar.find(
-                      (hasta) => hasta.id === randevu.HastaId
+                      (hasta) => hasta.id === randevu.hastaId
                     );
                     return(
                       <TableRow

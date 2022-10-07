@@ -20,13 +20,13 @@
             "id": "1",
             "sikayet": "grip",
             "uygulananTedavi": "2 gün istirahat tavsiye edildi",
-            "YazılanIlaçlar": ["parol", "keratin","agumentine"]
+            "YazılanIlaclar": ["parol", "keratin","agumentine"]
         },
         {
             "id": "2",
             "sikayet": "bel ağrısı",
             "uygulananTedavi": "ayakta",
-            "YazılanIlaçlar": ["parol", "voltaren"]
+            "YazılanIlaclar": ["parol", "voltaren"]
         }
     ]
 }
